@@ -1,0 +1,56 @@
+body {
+  padding-top: 10px;
+}
+footer {
+  margin: 20px 0 30px 0;
+}
+.bs-docs-section {
+  margin-top: 0;
+}
+#movie_table {
+  width: 100%;
+}
+#movie_table td {
+  min-width: 40px;
+  text-align: left;
+  padding: 2px 0;
+  height: 42px;
+}
+td.td_delete {
+  text-align: right !important;
+}
+.input_movie {
+  width: 240px;
+  background: transparent;
+  border: none;
+}
+.input_year {
+  width: 40px;
+  background: transparent;
+  border: none;
+}
+.admintool {
+  font-size: 15px;
+  color: #ffffff;
+  background-color: #008cbc;
+  border: 1px solid transparent;
+  border-radius: 0px;
+  padding: 8px 16px;
+  margin-left: 10px;
+  display: inline-block;
+  float:right;
+}
+.admintool:hover {
+  color: #ffffff;
+  background-color: #006689;
+  text-decoration: none;
+}
+.form-search {
+  overflow: hidden;
+}
+.delete {
+  background-color: #7fc0e0;
+}
+.delete:hover {
+  background-color: #0079a1;
+}

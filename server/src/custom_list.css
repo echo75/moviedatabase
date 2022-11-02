@@ -1,0 +1,65 @@
+body {
+  padding-top: 10px;
+}
+footer {
+  margin: 20px 0 30px 0;
+}
+.bs-docs-section {
+  margin-top: 0;
+}
+#movie_table {
+  width: 100%;
+}
+
+.title {
+  padding-left: 5px;
+}
+.input_movie {
+  width: 240px;
+  background: transparent;
+  border: none;
+}
+.input_year {
+  width: 40px;
+  background: transparent;
+  border: none;
+}
+.save {
+  background-color: #7fc0e0;
+  float:right;
+  /* min-width: 120px; */
+  padding: 8px 16px;
+}
+.save:hover {
+  background-color: #0079a1;
+}
+.table-responsive {
+  background-color: #989800;
+}
+.year {
+  width: 40px;
+}
+.admintool {
+  font-size: 15px;
+  color: #ffffff;
+  background-color: #008cbc;
+  border: 1px solid transparent;
+  border-radius: 0px;
+  padding: 8px 16px;
+  margin-left: 10px;
+  display: inline-block;
+  float:right;
+}
+.admintool:hover {
+  color: #ffffff;
+  background-color: #006689;
+  text-decoration: none;
+}
+.fieldset, .legend {
+  width: 100%;
+}
+@media only screen and (max-width: 578px ) {
+.cell {
+padding: 0 10px;
+}
+}
