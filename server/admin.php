@@ -10,9 +10,9 @@ try {
   $response = $query->fetchAll();
   $pdo = null;
 } catch (PDOException $e) {
-  echo "DataBase Error: The user could not be added.<br>" . $e->getMessage();
+  echo "DataBase Error:<br>" . $e->getMessage();
 } catch (Exception $e) {
-  echo "General Error: The user could not be added.<br>" . $e->getMessage();
+  echo "General Error:<br>" . $e->getMessage();
 }
 
 
