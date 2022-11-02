@@ -3,10 +3,18 @@ include("./includes/session-include.php"); // Session für Loginstatus
 include("./includes/db-parameter.php");
 
 $pdo = new PDO('mysql:host='.$host.';dbname='.$db.'', $user, $pwd);
+$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+try {
+  $query = $pdo->prepare("SELECT * FROM `mymovies` ORDER BY `mymovies`.`title` ASC");
+  $query->execute();
+  $response = $query->fetchAll();
+  $pdo = null;
+} catch (PDOException $e) {
+  echo "DataBase Error: The user could not be added.<br>" . $e->getMessage();
+} catch (Exception $e) {
+  echo "General Error: The user could not be added.<br>" . $e->getMessage();
+}
 
-$statement = $pdo->prepare("SELECT * FROM `mymovies` ORDER BY `mymovies`.`title` ASC");
-$statement->execute();
-$result_stamp = $statement->fetchAll();
 
 //var_dump($result_stamp);
 
@@ -51,7 +59,7 @@ $result_stamp = $statement->fetchAll();
                     <tbody>
                       <?php
                        $i = 0;
-                       foreach ($result_stamp as $movie) {
+                       foreach ($response as $movie) {
                        $i = ++$i;
                       ?>
                       <tr>

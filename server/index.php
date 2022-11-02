@@ -2,7 +2,7 @@
 session_start();
 include("./includes/db-parameter.php");
 
-$pdo = new PDO('mysql:host='.$host.';dbname='.$db.'', $user, $pwd);
+
 
 $vartodo = htmlspecialchars($_POST['todo']);
 $varuser = htmlspecialchars($_POST['user']);
@@ -11,13 +11,24 @@ $varpassword = $_POST['password'];
 $ueberschrift = "<h4>Login für meine Filme-Datenbank</h4>";
 
 if ($vartodo == "login") {
-  $statement = $pdo->prepare("SELECT user FROM user WHERE LOWER(user) = ? AND password = ? ;");
-  $statement->execute(array($varuser, $varpassword));
-  $result_stamp = $statement->fetch();
+  $pdo = new PDO('mysql:host=' . $host . ';dbname=' . $db . '', $user, $pwd);
+  $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  try {
+    $query = $pdo->prepare("SELECT user FROM user WHERE LOWER(user) = ? AND password = ? ;");
+    $query->execute(array($varuser, $varpassword));
+    $response = $query->fetch();
+    $pdo = null;
+  } catch (PDOException $e) {
+    echo "DataBase Error: The user could not be added.<br>" . $e->getMessage();
+  } catch (Exception $e) {
+    echo "General Error: The user could not be added.<br>" . $e->getMessage();
+  }
 
-  //var_dump($result_stamp);
 
-  if($result_stamp['user'] === $varuser) {
+
+  //var_dump($response);
+
+  if($response['user'] === $varuser) {
     // Login successfull !
     $_SESSION['ok_logged_in'] = true;
     $weiterleitung="list.php";
