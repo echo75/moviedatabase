@@ -24,7 +24,7 @@ if ($neu - $_SESSION['letzter_kontakt'] > $verfallszeit) {
 	   exit;
 	}
 }
-#Wer hier noch da ist, ist entweder neu oder hat weniger als 5' getrödelt
+#Wer hier noch da ist, ist entweder neu oder hat weniger als 1h getrödelt
 $_SESSION['letzter_kontakt'] = $neu;
 # weiter im Script
 ?>
