@@ -1,6 +1,6 @@
 # moviedatabase
 
-Moviesuche in der imdb Datenbank. Hier in zwei Versionen: API-Request im Client und API-Request auf dem Server:
+Moviesuche in der OMDb Datenbank. Hier in zwei Versionen: API-Request im Client und API-Request auf dem Server:
 
 Client bedeutet in diesem Fall, die API-Abfrage wird im Browser per JavaScript ausgeführt. Allerdings ist diese Vorgehensweise mit dem API-Token im Browserquellcode nicht empfehlenswert. 
 
