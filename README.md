@@ -1,13 +1,5 @@
 # moviedatabase
 
-Moviesuche in der OMDb Datenbank. Hier in zwei Versionen: API-Request im Client und API-Request auf dem Server:
-
-Client bedeutet in diesem Fall, die API-Abfrage wird im Browser per JavaScript ausgeführt. Allerdings ist diese Vorgehensweise mit dem API-Token im Browserquellcode nicht empfehlenswert.
-
-Server bedeutet, die API-Abfrage findet auf dem Server in PHP statt.
-
-# MVC in PHP
-
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 An application for accessing the OMDb Database via API. This application has tow branches: One with the API-Request in the client and one with the API-Request on the server.
