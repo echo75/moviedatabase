@@ -2,7 +2,8 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-This is an application designed to access the OMDb Database using its provided API. This application has two branches: One with the API-Request in the client and one with the API-Request on the server.
+This is an application designed to access the OMDb Database using its provided API.
+This application has two branches: One with the API-request in the client and one with the API-request on the server.
 
 ## Accessing the app online
 
@@ -16,7 +17,7 @@ A hosted production version is available at https://hedman.de/movie-database/
 
 Run the `Setup-SQL.sql` on your database. Make sure, that you create your own database first, before running the SQL-Script, that creates the tables `users` and `mymovies` on your local MySQL-Server.
 
-The app will be available most likley at http://localhost:8888
+The app will be available most likely at http://localhost:8888
 
 ## MIT License
 
