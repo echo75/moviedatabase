@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-An application for accessing the OMDb Database via API. This application has tow branches: One with the API-Request in the client and one with the API-Request on the server.
+This is an application designed to access the OMDb Database using its provided API. This application has two branches: One with the API-Request in the client and one with the API-Request on the server.
 
 ## Accessing the app online
 
