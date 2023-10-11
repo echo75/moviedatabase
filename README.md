@@ -17,7 +17,7 @@ A hosted production version is available at https://hedman.de/movie-database/
 
 Run the `Setup-SQL.sql` on your database. Make sure, that you create your own database first, before running the SQL-Script, that creates the tables `users` and `mymovies` on your local MySQL-Server.
 
-The app will be available most likely at http://localhost:8888 or http://localhost:8080, depending on your local server configuration.
+The app will be available most likely at http://localhost:8000 or http://localhost:8080, depending on your local server configuration.
 
 ## MIT License
 
