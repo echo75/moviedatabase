@@ -27,8 +27,7 @@ if ($vartodo == "login") {
 
 
   //var_dump($response);
-
-  if ($response['user'] === $varuser) {
+  if ($response && password_verify($varpassword, $response['password'])) {
     // Login successfull !
     $_SESSION['ok_logged_in'] = true;
     $weiterleitung = "list.php";
