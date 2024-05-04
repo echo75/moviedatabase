@@ -2,8 +2,6 @@
 session_start();
 include("./includes/db-parameter.php");
 
-$pdo = new PDO('mysql:host=' . $host . ';dbname=' . $db . '', $user, $pwd);
-
 $vartodo = htmlspecialchars($_POST['todo']);
 $varuser = htmlspecialchars($_POST['user']);
 $varpassword = $_POST['password'];
@@ -14,8 +12,8 @@ if ($vartodo == "login") {
   $pdo = new PDO('mysql:host=' . $host . ';dbname=' . $db . '', $user, $pwd);
   $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   try {
-    $query = $pdo->prepare("SELECT user FROM user WHERE LOWER(user) = ? AND password = ? ;");
-    $query->execute(array($varuser, $varpassword));
+    $query = $pdo->prepare("SELECT user, password FROM user WHERE LOWER(user) = ?;");
+    $query->execute(array($varuser));
     $response = $query->fetch();
     $pdo = null;
   } catch (PDOException $e) {
@@ -23,10 +21,6 @@ if ($vartodo == "login") {
   } catch (Exception $e) {
     echo "General Error:<br>" . $e->getMessage();
   }
-
-
-
-  //var_dump($response);
 
   if ($response && password_verify($varpassword, $response['password'])) {
     // Login successfull !
