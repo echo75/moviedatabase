@@ -68,7 +68,7 @@ include("./includes/session-include.php"); // Session für Loginstatus
   </div>
   <script>
     async function getMovie(movie_title) {
-
+      // No one would ever do this -> because the API call in the frontend reveals the API-Pwd 
       var movie_title = document.getElementById("serach_s").value;
       const api_url = 'https://www.omdbapi.com/?apikey=e1112f86&s=' + movie_title + '&type=movie';
       const response = await fetch(api_url);

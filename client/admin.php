@@ -16,8 +16,6 @@ try {
   echo "General Error:<br>" . $e->getMessage();
 }
 
-//var_dump($response);
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -106,7 +104,7 @@ console.log(id);
     //dataType: dataType
   });
 });
-// Speichern triggern:
+// delete-animation triggern:
 $(".delete").on("click",function(){
   $(this).closest('.delete').css("background-color","#ff2222");
   var tr = $(this).closest('tr');
