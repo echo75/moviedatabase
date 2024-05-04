@@ -15,12 +15,10 @@ if (!empty($_POST['search_s'])) {
 
   //var_dump($result);
 
+} else {
+  $search_words = '';
+  $result = '';
 }
-/*
-else if ($_POST['resetview'] == 'resetview') {
-  $_SESSION['session_movies'] = '';
-}
-*/
 ?>
 <!DOCTYPE html>
 <html lang="de">
